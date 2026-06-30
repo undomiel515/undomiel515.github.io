@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhan Luo | Personal Homepage</title>
+  <style>
+    :root {
+      --bg: #fafafa;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --link: #1d4ed8;
+      --maxw: 980px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    .container {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 36px 20px 64px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 32px;
+      align-items: start;
+      margin-bottom: 36px;
+    }
+
+    .photo {
+      width: 220px;
+      aspect-ratio: 1 / 1.15;
+      object-fit: cover;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: #f3f4f6;
+    }
+
+    .name {
+      font-size: 2.2rem;
+      line-height: 1.15;
+      margin: 0 0 10px;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      font-size: 1.05rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .contact {
+      margin: 16px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .contact li { margin: 6px 0; }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      margin-top: 14px;
+      font-size: 0.98rem;
+    }
+
+    section {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 24px 24px 18px;
+      margin: 18px 0;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 1.35rem;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 8px;
+    }
+
+    p { margin: 10px 0; }
+
+    ul.clean {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    ul.clean li { margin: 10px 0; }
+
+    .paper-title {
+      font-weight: 600;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .footer {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-top: 26px;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .photo {
+        width: min(220px, 60vw);
+      }
+
+      .name { font-size: 1.9rem; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="hero">
+      <img src="photo.jpg" alt="Profile photo" class="photo" />
+
+      <div>
+        <h1 class="name">Muhan Luo</h1>
+
+        <div class="subtitle">
+          PhD Candidate, Department of Mathematics, National University of Singapore
+        </div>
+
+        <p>
+          Welcome to my homepage. My research interests lie in complex dynamics,
+          especially higher-dimensional complex dynamics, holomorphic correspondences,
+          Green currents, and equidistribution problems for periodic points.
+        </p>
+
+        <ul class="contact">
+          <li><strong>Email:</strong> yourname@u.nus.edu</li>
+          <li><strong>Office:</strong> Department of Mathematics, National University of Singapore</li>
+          <li><strong>Address:</strong> 10 Lower Kent Ridge Road, Singapore</li>
+        </ul>
+
+        <div class="links">
+          <a href="cv.pdf" target="_blank">CV</a>
+          <a href="#publications">Publications</a>
+          <a href="#talks">Talks</a>
+          <a href="#teaching">Teaching</a>
+          <a href="https://arxiv.org/" target="_blank">arXiv</a>
+          <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <h2>Research Interests</h2>
+      <p>
+        Complex dynamics; higher-dimensional complex dynamics; holomorphic correspondences;
+        Green currents; pluripotential theory; equidistribution of periodic points.
+      </p>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <ul class="clean">
+        <li>
+          <strong>National University of Singapore</strong>,
+          Ph.D. in Mathematics, 2022–2026
+        </li>
+        <li>
+          <strong>Peking University</strong>,
+          B.S. in Mathematics, 2018–2022
+        </li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2>Publications and Preprints</h2>
+      <ul class="clean">
+        <li>
+          <span class="paper-title">
+            Green currents of holomorphic correspondences on compact Kähler manifolds
+          </span><br />
+          <span class="meta">Muhan Luo and Marco Vergamini. 2026.</span><br />
+          <a href="https://arxiv.org/abs/2603.06093" target="_blank">arXiv</a>
+          /
+          <a href="papers/LV26.pdf" target="_blank">PDF</a>
+        </li>
+
+        <li>
+          <span class="paper-title">
+            Add your next paper title here
+          </span><br />
+          <span class="meta">Authors. Journal / Preprint status.</span><br />
+          <a href="#">Link</a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="talks">
+      <h2>Talks</h2>
+      <ul class="clean">
+        <li>
+          Talk title, Seminar name, Institution, 2026.
+          <a href="slides/talk1.pdf" target="_blank">Slides</a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="teaching">
+      <h2>Teaching</h2>
+      <ul class="clean">
+        <li>Course title, semester, role.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Notes</h2>
+      <p>
+        Save this file as <code>index.html</code>. Then upload
+        <code>photo.jpg</code>, <code>cv.pdf</code>, and your papers/slides folders
+        to the repository root.
+      </p>
+    </section>
+
+    <div class="footer">
+      Last updated: July 2026
+    </div>
+  </div>
+</body>
+</html>
