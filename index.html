@@ -4,21 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Muhan Luo | Personal Homepage</title>
+
   <style>
     :root {
-  --bg: #f5f7fb;
-  --card: #ffffff;
-  --text: #1f2937;
-  --muted: #6b7280;
-  --line: #d8e0ec;
-  --link: #2563eb;
-  --accent: #1e3a8a;
-  --soft-accent: #eef4ff;
-  --maxw: 1150px;
-}
-    * { box-sizing: border-box; }
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --line: #d8e0ec;
+      --link: #2563eb;
+      --accent: #1e3a8a;
+      --maxw: 980px;
+    }
 
-    html { scroll-behavior: smooth; }
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       margin: 0;
@@ -29,38 +34,32 @@
     }
 
     a {
-  color: var(--link);
-  text-decoration: none;
-  font-weight: 500;
-}
+      color: var(--link);
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-a:hover {
-  text-decoration: underline;
-}
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 36px 24px 64px;
+    }
+
     .hero {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 32px;
-      align-items: start;
       margin-bottom: 36px;
     }
 
-    .photo {
-      width: 220px;
-      aspect-ratio: 1 / 1.15;
-      object-fit: cover;
-      border-radius: 18px;
-      border: 1px solid var(--line);
-      background: #f3f4f6;
-    }
-
     .name {
-  font-size: 2.2rem;
-  line-height: 1.15;
-  margin: 0 0 10px;
-  font-weight: 700;
-  color: var(--accent);
-}
+      font-size: 2.2rem;
+      line-height: 1.15;
+      margin: 0 0 10px;
+      font-weight: 700;
+      color: var(--accent);
+    }
 
     .subtitle {
       font-size: 1.05rem;
@@ -74,7 +73,9 @@ a:hover {
       list-style: none;
     }
 
-    .contact li { margin: 6px 0; }
+    .contact li {
+      margin: 6px 0;
+    }
 
     .links {
       display: flex;
@@ -85,31 +86,35 @@ a:hover {
     }
 
     section {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-left: 5px solid var(--accent);
-  border-radius: 18px;
-  padding: 24px 24px 18px;
-  margin: 18px 0;
-  box-shadow: 0 4px 14px rgba(30, 58, 138, 0.06);
-}
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: 0;
+      padding: 24px 28px 20px;
+      margin: 20px 0;
+      box-shadow: 0 2px 8px rgba(30, 58, 138, 0.04);
+    }
 
     h2 {
-  margin: 0 0 14px;
-  font-size: 1.35rem;
-  color: var(--accent);
-  border-bottom: 1px solid var(--line);
-  padding-bottom: 8px;
-}
+      margin: 0 0 14px;
+      font-size: 1.35rem;
+      color: var(--accent);
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 8px;
+    }
 
-    p { margin: 10px 0; }
+    p {
+      margin: 10px 0;
+    }
 
     ul.clean {
       margin: 0;
       padding-left: 20px;
     }
 
-    ul.clean li { margin: 10px 0; }
+    ul.clean li {
+      margin: 10px 0;
+    }
 
     .paper-title {
       font-weight: 600;
@@ -120,6 +125,18 @@ a:hover {
       font-size: 0.95rem;
     }
 
+    .item-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: baseline;
+    }
+
+    .date {
+      white-space: nowrap;
+      color: var(--muted);
+    }
+
     .footer {
       color: var(--muted);
       font-size: 0.92rem;
@@ -128,52 +145,55 @@ a:hover {
     }
 
     @media (max-width: 760px) {
-      .hero {
-        grid-template-columns: 1fr;
+      .container {
+        padding: 28px 18px 48px;
       }
 
-      .photo {
-        width: min(220px, 60vw);
+      .name {
+        font-size: 1.9rem;
       }
 
-      .name { font-size: 1.9rem; }
+      .item-row {
+        display: block;
+      }
+
+      .date {
+        display: block;
+        margin-top: 2px;
+      }
     }
   </style>
 </head>
 
 <body>
   <div class="container">
+
     <div class="hero">
-     <!--
-<img src="photo.jpg" alt="Profile photo" class="photo" />
--->
-      <div>
-        <h1 class="name">Muhan Luo/罗慕涵</h1>
+      <h1 class="name">Muhan Luo / 罗慕涵</h1>
 
-        <div class="subtitle">
-          PhD Candidate, Department of Mathematics, National University of Singapore
-        </div>
+      <div class="subtitle">
+        PhD Candidate, Department of Mathematics, National University of Singapore
+      </div>
 
-        <p>
-          Welcome to my homepage. My research interests lie in complex dynamics,
-          especially higher-dimensional complex dynamics, holomorphic correspondences,
-          Green currents, and equidistribution problems for periodic points.
-        </p>
+      <p>
+        Welcome to my homepage. My research interests lie in complex dynamics,
+        especially higher-dimensional complex dynamics, holomorphic correspondences,
+        Green currents, and equidistribution problems for periodic points.
+      </p>
 
-        <ul class="contact">
-          <li><strong>Email:</strong> e0708207@u.nus.edu/ luomuh98@gmail.com</li>
-          <li><strong>Office:</strong> Department of Mathematics, National University of Singapore</li>
-          <li><strong>Address:</strong> 10 Lower Kent Ridge Road, Singapore</li>
-        </ul>
+      <ul class="contact">
+        <li><strong>Email:</strong> e0708207@u.nus.edu / luomuh98@gmail.com</li>
+        <li><strong>Office:</strong> Department of Mathematics, National University of Singapore</li>
+        <li><strong>Address:</strong> 10 Lower Kent Ridge Road, Singapore</li>
+      </ul>
 
-        <div class="links">
-          <a href="CV.pdf" target="_blank">CV</a>
-          <a href="#publications">Publications</a>
-          <a href="#talks">Talks</a>
-          <a href="#teaching">Teaching</a>
-          <a href="https://arxiv.org/a/luo_m_2.html" target="_blank">arXiv</a>
-          <a href="https://scholar.google.com/citations?user=u96B_1cAAAAJ&hl=en" target="_blank">Google Scholar</a>
-        </div>
+      <div class="links">
+        <a href="CV.pdf" target="_blank">CV</a>
+        <a href="#publications">Publications</a>
+        <a href="#talks">Talks</a>
+        <a href="#teaching">Teaching</a>
+        <a href="https://arxiv.org/a/luo_m_2.html" target="_blank">arXiv</a>
+        <a href="https://scholar.google.com/citations?user=u96B_1cAAAAJ&hl=en" target="_blank">Google Scholar</a>
       </div>
     </div>
 
@@ -186,36 +206,40 @@ a:hover {
     </section>
 
     <section>
-  <h2>Education</h2>
-  <ul class="clean">
-    <li>
-      <div style="display: flex; justify-content: space-between; gap: 20px;">
-        <strong>National University of Singapore</strong>
-        <span>Aug. 2021 &ndash; Jun. 2026</span>
-      </div>
-      Ph.D. in Mathematics<br />
-      Supervisor:
-      <a href="https://blog.nus.edu.sg/dinh/" target="_blank">Tien-Cuong Dinh</a>
-    </li>
+      <h2>Education</h2>
 
-    <li>
-      <div style="display: flex; justify-content: space-between; gap: 20px;">
-        <strong>Peking University</strong>
-        <span>Sept. 2016 &ndash; Jul. 2020</span>
-      </div>
-      B.Sc. in Mathematics and Applied Mathematics
-    </li>
-  </ul>
-</section>
+      <ul class="clean">
+        <li>
+          <div class="item-row">
+            <strong>National University of Singapore</strong>
+            <span class="date">Aug. 2021 &ndash; Jun. 2026</span>
+          </div>
+          Ph.D. in Mathematics<br />
+          Supervisor:
+          <a href="https://blog.nus.edu.sg/dinh/" target="_blank">Tien-Cuong Dinh</a>
+        </li>
+
+        <li>
+          <div class="item-row">
+            <strong>Peking University</strong>
+            <span class="date">Sept. 2016 &ndash; Jul. 2020</span>
+          </div>
+          B.Sc. in Mathematics and Applied Mathematics
+        </li>
+      </ul>
+    </section>
 
     <section id="publications">
       <h2>Publications and Preprints</h2>
+
       <ul class="clean">
         <li>
           <span class="paper-title">
             Green currents of holomorphic correspondences on compact Kähler manifolds
           </span><br />
-          <span class="meta">with <a href="https://marcov999.gitlab.io/" target="_blank">Marco Vergamini</a>. 2026.</span><br />
+          <span class="meta">
+            with <a href="https://marcov999.gitlab.io/" target="_blank">Marco Vergamini</a>. 2026.
+          </span><br />
           <a href="https://arxiv.org/abs/2603.06093" target="_blank">arXiv</a>
           /
           <a href="papers/LV26.pdf" target="_blank">PDF</a>
@@ -225,119 +249,123 @@ a:hover {
           <span class="paper-title">
             Equidistribution of saddle periodic points for Hénon-like maps
           </span><br />
-          <span class="meta">with Qi Zhou. 2025. </span><br />
+          <span class="meta">with Qi Zhou. 2025.</span><br />
           <a href="https://arxiv.org/abs/2502.20103" target="_blank">arXiv</a>
           /
           <a href="papers/LZ25.pdf" target="_blank">PDF</a>
         </li>
 
-         <li>
+        <li>
           <span class="paper-title">
             Equidistribution of graphs of holomorphic correspondences
           </span><br />
-          <span class="meta">Proc. Amer. Math. Soc. 153 (2025), 2579-2589 </span><br />
+          <span class="meta">
+            Proc. Amer. Math. Soc. 153 (2025), 2579&ndash;2589.
+          </span><br />
           <a href="https://arxiv.org/abs/2405.13838" target="_blank">arXiv</a>
           /
           <a href="papers/Luo25PAMS.pdf" target="_blank">PDF</a>
         </li>
       </ul>
     </section>
-    
-  <section id="talks">
-  <h2>Talks</h2>
 
-  <ul class="clean">
-    <li>
-      <div style="display: flex; justify-content: space-between; gap: 20px;">
-        <span>Analysis, Dynamics and Geometry Seminar</span>
-        <span>Sept. 2025</span>
-      </div>
-      <em>Université d'Orléans, Orléans</em>
-    </li>
+    <section id="talks">
+      <h2>Talks</h2>
 
-    <li>
-      <div style="display: flex; justify-content: space-between; gap: 20px;">
-        <span>Rencontre de l'ANR DynAtrois</span>
-        <span>Sept. 2025</span>
-      </div>
-      <em>Institut de Mathématiques de Bourgogne, Dijon</em>
-    </li>
+      <ul class="clean">
+        <li>
+          <div class="item-row">
+            <span>Analysis, Dynamics and Geometry Seminar</span>
+            <span class="date">Sept. 2025</span>
+          </div>
+          <em>Université d'Orléans, Orléans</em>
+        </li>
 
-    <li>
-      <div style="display: flex; justify-content: space-between; gap: 20px;">
-        <span>Complex Geometry &amp; Dynamics @ Lille 2025</span>
-        <span>Sept. 2025</span>
-      </div>
-      <em>Université de Lille, Lille</em>
-    </li>
+        <li>
+          <div class="item-row">
+            <span>Rencontre de l'ANR DynAtrois</span>
+            <span class="date">Sept. 2025</span>
+          </div>
+          <em>Institut de Mathématiques de Bourgogne, Dijon</em>
+        </li>
 
-    <li>
-      <div style="display: flex; justify-content: space-between; gap: 20px;">
-        <span>Geometry Seminar</span>
-        <span>Jul. 2025</span>
-      </div>
-      <em>Università di Pisa, Pisa</em>
-    </li>
+        <li>
+          <div class="item-row">
+            <span>Complex Geometry &amp; Dynamics @ Lille 2025</span>
+            <span class="date">Sept. 2025</span>
+          </div>
+          <em>Université de Lille, Lille</em>
+        </li>
 
-    <li>
-      <div style="display: flex; justify-content: space-between; gap: 20px;">
-        <span>Complex Geometry, Complex Analysis and Dynamics</span>
-        <span>Jul. 2025</span>
-      </div>
-      15-minute short talk, <em>CIRM, Marseille</em>
-    </li>
+        <li>
+          <div class="item-row">
+            <span>Geometry Seminar</span>
+            <span class="date">Jul. 2025</span>
+          </div>
+          <em>Università di Pisa, Pisa</em>
+        </li>
 
-    <li>
-      <div style="display: flex; justify-content: space-between; gap: 20px;">
-        <span>Geometry, Topology and Dynamics Seminar</span>
-        <span>Mar. 2025</span>
-      </div>
-      <em>National University of Singapore, Singapore</em>
-    </li>
-  </ul>
-</section>
+        <li>
+          <div class="item-row">
+            <span>Complex Geometry, Complex Analysis and Dynamics</span>
+            <span class="date">Jul. 2025</span>
+          </div>
+          15-minute short talk, <em>CIRM, Marseille</em>
+        </li>
 
-   <section id="teaching">
-  <h2>Teaching</h2>
+        <li>
+          <div class="item-row">
+            <span>Geometry, Topology and Dynamics Seminar</span>
+            <span class="date">Mar. 2025</span>
+          </div>
+          <em>National University of Singapore, Singapore</em>
+        </li>
+      </ul>
+    </section>
 
-  <p>
-   <strong>National University of Singapore</strong>, <em>Teaching Assistant</em>
-  </p>
+    <section id="teaching">
+      <h2>Teaching</h2>
 
-  <ul class="clean">
-    <li>
-      <div style="display: flex; justify-content: space-between; gap: 20px;">
-        <span>MA1521: Calculus for Computing</span>
-        <span>Spring 2023</span>
-      </div>
-    </li>
+      <p>
+        <strong>National University of Singapore</strong>,
+        <em>Teaching Assistant</em>
+      </p>
 
-    <li>
-      <div style="display: flex; justify-content: space-between; gap: 20px;">
-        <span>MA2101: Linear Algebra II</span>
-        <span>Spring 2024</span>
-      </div>
-    </li>
+      <ul class="clean">
+        <li>
+          <div class="item-row">
+            <span>MA1521: Calculus for Computing</span>
+            <span class="date">Spring 2023</span>
+          </div>
+        </li>
 
-    <li>
-      <div style="display: flex; justify-content: space-between; gap: 20px;">
-        <span>MA1521: Calculus for Computing</span>
-        <span>Spring 2025</span>
-      </div>
-    </li>
+        <li>
+          <div class="item-row">
+            <span>MA2101: Linear Algebra II</span>
+            <span class="date">Spring 2024</span>
+          </div>
+        </li>
 
-    <li>
-      <div style="display: flex; justify-content: space-between; gap: 20px;">
-        <span>MA1521: Calculus for Computing</span>
-        <span>Fall 2025</span>
-      </div>
-    </li>
-  </ul>
-</section>
-    
+        <li>
+          <div class="item-row">
+            <span>MA1521: Calculus for Computing</span>
+            <span class="date">Spring 2025</span>
+          </div>
+        </li>
+
+        <li>
+          <div class="item-row">
+            <span>MA1521: Calculus for Computing</span>
+            <span class="date">Fall 2025</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
     <div class="footer">
       Last updated: July 2026
     </div>
+
   </div>
 </body>
 </html>
